@@ -2,7 +2,7 @@ import express from "express";
 import mongoose from "mongoose";
 import bodyParser from "body-parser";
 import cors from 'cors';
-import invitados from "./Services/invitados.js";
+import invitados from "../Services/invitados.js";
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -48,4 +48,5 @@ app.listen(PORT,'0.0.0.0', () => {
 app.use((err, req, res, next) => {
   console.error(err.stack);
   res.status(500).send('Something broke!');
+  res.send("Express on vercell")
 });

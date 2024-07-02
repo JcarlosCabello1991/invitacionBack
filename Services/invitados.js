@@ -27,12 +27,13 @@ invitados.post('/invitado', async (req, res) => {
     });
 
     if(!!createInvitado){
-      res.status(200).json({error: false, message: "exito"});
+      // res.status(200).json({error: false, message: "exito"});
+      res.send(JSON.stringify({error: false, message: "exito"}))
     }else{
-      res.status(400).json({error: true, message: "error"})
+      res.send(JSON.stringify({error: false, message: "error"}))
     }
   } catch (error) {
-    res.status(400).json({error: true,  message: error.message });
+    res.send(JSON.stringify({error: false, message: "error"}))
   }
 });
 
@@ -45,12 +46,13 @@ invitados.get('/invitados', async(req, res) => {
 
     if(!!user){
       let result = {error: false, message: user}
-      res.status(200).json(result);
+      res.send(JSON.stringify(result))
     }else{
-      res.status(400).json({error: true, message: "error"});
+      // res.status(400).json({error: true, message: "error"});
+      res.send(JSON.stringify({error: false, message: "error"}))
     }
   } catch (error) {
-    res.status(400).json({error: true,  message: error.message });
+    res.send(JSON.stringify({error: false, message: "error"}))
   }  
 })
 
