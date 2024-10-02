@@ -12,7 +12,8 @@ invitados.post('/invitado', async (req, res) => {
     const asistenciaPrebodaInvitado = data.asistenciaPreboda;
     const cancionInvitado = data.cancionSugerida;
     const intoleranciasInvitado = data.intolerancias;
-    const busInvitado = data.bus;
+    const busInvitadoIda = data.busIda;
+    const busInvitadoVuelta = data.busVuelta;
     const hotelInvitado = data.hotel;
 
     //Creamos el invitado con todos los campos
@@ -22,7 +23,8 @@ invitados.post('/invitado', async (req, res) => {
       asistenciaPreboda: asistenciaPrebodaInvitado,
       cancionSugerida: cancionInvitado,
       intolerancias: intoleranciasInvitado,
-      bus: busInvitado,
+      busIda: busInvitadoIda,
+      busVuelta: busInvitadoVuelta,
       hotel: hotelInvitado
     });
 
