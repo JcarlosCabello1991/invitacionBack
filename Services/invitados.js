@@ -25,7 +25,7 @@ invitados.post('/invitado', async (req, res) => {
       busIda: busInvitadoIda,
       busVuelta: busInvitadoVuelta
     });
-    console.log(createInvitado)
+
     if(!!createInvitado){
       // res.status(200).json({error: false, message: "exito"});
       res.send(JSON.stringify({error: false, message: "exito"}))
