@@ -8,8 +8,7 @@ const invitadosSchema = new mongoose.Schema({
   cancionSugerida: { type: String , required: true},
   intolerancias: { type: String , required: true},
   busIda: { type: String , required: true},
-  busVuelta: { type: String , required: true},
-  hotel: { type: String , required: true},
+  busVuelta: { type: String , required: true}
 },{
   versionKey: false
 });

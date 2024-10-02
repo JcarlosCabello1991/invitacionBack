@@ -14,7 +14,6 @@ invitados.post('/invitado', async (req, res) => {
     const intoleranciasInvitado = data.intolerancias;
     const busInvitadoIda = data.busIda;
     const busInvitadoVuelta = data.busVuelta;
-    const hotelInvitado = data.hotel;
 
     //Creamos el invitado con todos los campos
     const createInvitado = await Invitado.create({
@@ -24,10 +23,9 @@ invitados.post('/invitado', async (req, res) => {
       cancionSugerida: cancionInvitado,
       intolerancias: intoleranciasInvitado,
       busIda: busInvitadoIda,
-      busVuelta: busInvitadoVuelta,
-      hotel: hotelInvitado
+      busVuelta: busInvitadoVuelta
     });
-
+    console.log(createInvitado)
     if(!!createInvitado){
       // res.status(200).json({error: false, message: "exito"});
       res.send(JSON.stringify({error: false, message: "exito"}))
