@@ -14,6 +14,7 @@ invitados.post('/invitado', async (req, res) => {
     const intoleranciasInvitado = data.intolerancias;
     const busInvitadoIda = data.busIda;
     const busInvitadoVuelta = data.busVuelta;
+    const mensaje = data.mensaje;
 
     //Creamos el invitado con todos los campos
     const createInvitado = await Invitado.create({
@@ -23,7 +24,8 @@ invitados.post('/invitado', async (req, res) => {
       cancionSugerida: cancionInvitado,
       intolerancias: intoleranciasInvitado,
       busIda: busInvitadoIda,
-      busVuelta: busInvitadoVuelta
+      busVuelta: busInvitadoVuelta,
+      mensaje: mensaje
     });
 
     if(!!createInvitado){
